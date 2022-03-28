@@ -9,6 +9,7 @@ metadata:
     io.kompose.service: podcast-web
   name: podcast-web
 spec:
+  type: LoadBalancer
   ports:
     - name: "5002"
       port: 5002

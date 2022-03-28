@@ -6,13 +6,13 @@ metadata:
     kompose.version: 1.26.1 (a9d05d509)
   creationTimestamp: null
   labels:
-    io.kompose.service: podcast-api
-  name: podcast-api
+    io.kompose.service: podcast-updater-worker
+  name: podcast-updater-worker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: podcast-api
+      io.kompose.service: podcast-updater-worker
   strategy: {}
   template:
     metadata:
@@ -21,22 +21,14 @@ spec:
         kompose.version: 1.26.1 (a9d05d509)
       creationTimestamp: null
       labels:
-        io.kompose.service: podcast-api
+        io.kompose.service: podcast-updater-worker
     spec:
       containers:
         - env:
-            - name: ASPNETCORE_ENVIRONMENT
-              value: Development
-            - name: ASPNETCORE_URLS
-              value: http://+:80
-            - name: ConnectionStrings__FeedQueue
-              value: UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://azurite
             - name: ConnectionStrings__PodcastDb
               value: Server=podcast.db;Database=Podcast;User Id=sa;Password=Pass@word
-          image: podcastapi
-          name: podcast-api
-          ports:
-            - containerPort: 80
+          image: jeffhollan/podcastupdaterworker
+          name: podcast-updater-worker
           resources: {}
       restartPolicy: Always
 status: {}

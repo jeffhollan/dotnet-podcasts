@@ -6,14 +6,15 @@ metadata:
     kompose.version: 1.26.1 (a9d05d509)
   creationTimestamp: null
   labels:
-    io.kompose.service: listentogether-hub
-  name: listentogether-hub
+    io.kompose.service: podcast-api
+  name: podcast-api
 spec:
   ports:
-    - name: "5001"
-      port: 5001
+    - name: "5000"
+      port: 5000
       targetPort: 80
   selector:
-    io.kompose.service: listentogether-hub
+    io.kompose.service: podcast-api
+  type: LoadBalancer
 status:
   loadBalancer: {}
