@@ -10,8 +10,8 @@ metadata:
   name: podcast-db
 spec:
   ports:
-    - name: "5433"
-      port: 5433
+    - name: "1433"
+      port: 1433
       targetPort: 1433
   selector:
     io.kompose.service: podcast-db

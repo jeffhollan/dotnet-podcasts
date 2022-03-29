@@ -11,8 +11,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - name: "5002"
-      port: 5002
+    - name: "80"
+      port: 80
       targetPort: 80
   selector:
     io.kompose.service: podcast-web

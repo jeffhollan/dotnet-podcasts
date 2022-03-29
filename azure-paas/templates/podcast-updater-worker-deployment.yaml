@@ -26,7 +26,7 @@ spec:
       containers:
         - env:
             - name: ConnectionStrings__PodcastDb
-              value: Server=podcast.db;Database=Podcast;User Id=sa;Password=Pass@word
+              value: Server=podcast-db;Database=Podcast;User Id=sa;Password=Pass@word
           image: jeffhollan/podcastupdaterworker
           name: podcast-updater-worker
           resources: {}

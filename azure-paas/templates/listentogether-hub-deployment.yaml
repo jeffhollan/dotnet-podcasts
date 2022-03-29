@@ -30,9 +30,9 @@ spec:
             - name: ASPNETCORE_URLS
               value: http://+:80
             - name: ConnectionStrings__ListenTogetherDb
-              value: Server=podcast.db;Database=ListenTogether;User Id=sa;Password=Pass@word
+              value: Server=podcast-db;Database=ListenTogether;User Id=sa;Password=Pass@word
             - name: NetPodcastApi__BaseAddress
-              value: http://podcast.api
+              value: http://podcast-api
           image: jeffhollan/listentogetherhub
           name: listentogether-hub
           ports:

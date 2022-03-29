@@ -10,8 +10,8 @@ metadata:
   name: listentogether-hub
 spec:
   ports:
-    - name: "5001"
-      port: 5001
+    - name: "80"
+      port: 80
       targetPort: 80
   selector:
     io.kompose.service: listentogether-hub

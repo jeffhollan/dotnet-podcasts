@@ -30,9 +30,9 @@ spec:
             - name: ASPNETCORE_URLS
               value: http://+:80
             - name: ListenTogetherHub
-              value: http://listentogether.hub/listentogether
+              value: http://listentogether-hub/listentogether
             - name: PodcastApi__BaseAddress
-              value: http://podcast.api
+              value: http://podcast-api
           image: jeffhollan/podcastweb
           name: podcast-web
           ports:

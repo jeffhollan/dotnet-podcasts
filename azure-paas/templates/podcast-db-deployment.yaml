@@ -24,6 +24,10 @@ spec:
       labels:
         io.kompose.service: podcast-db
     spec:
+      terminationGracePeriodSeconds: 30
+      hostname: mssqlinst
+      securityContext:
+        fsGroup: 10001
       containers:
         - env:
             - name: ACCEPT_EULA

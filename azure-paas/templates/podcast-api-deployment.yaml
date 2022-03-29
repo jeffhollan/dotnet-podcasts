@@ -30,9 +30,9 @@ spec:
             - name: ASPNETCORE_URLS
               value: http://+:80
             - name: ConnectionStrings__FeedQueue
-              value: UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://azurite
+              value: "DefaultEndpointsProtocol=https;AccountName=jehollantodo;AccountKey=awcZZeJo2LT5w8+sEJa9nT2JqLL44NXAo0juHBwAs+aJOCxdMJNkTmG7yyj6VB0pJI40D0FRuKDlDqomdHnnmw==;EndpointSuffix=core.windows.net"
             - name: ConnectionStrings__PodcastDb
-              value: Server=podcast.db;Database=Podcast;User Id=sa;Password=Pass@word
+              value: Server=podcast-db;Database=Podcast;User Id=sa;Password=Pass@word
           image: jeffhollan/podcastapi
           name: podcast-api
           ports:
